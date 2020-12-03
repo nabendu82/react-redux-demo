@@ -8,7 +8,7 @@ const eggReducer = (state = initialState, action) => {
     switch(action.type) {
         case BUY_EGG: return {
             ...state,
-            numOfEggs: state.numOfEggs - 1
+            numOfEggs: state.numOfEggs - action.payload
         }
         default: return state
     }
